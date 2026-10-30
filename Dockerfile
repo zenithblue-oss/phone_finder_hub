@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Build PHP Application
-FROM php:8.4-apache
+FROM php:8.4.27-apache
 
 # Install system dependencies (PHP extensions + Python + native libs for rembg/onnxruntime)
 RUN apt-get update && apt-get install -y \
